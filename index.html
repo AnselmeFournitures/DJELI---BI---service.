@@ -7,141 +7,1887 @@
   <meta name="description" content="DJELI BI SERVICE — fournitures scolaires à Daloa, Gbokora.">
   <link rel="manifest" href="manifest.json">
   <title>DJELI BI SERVICE — Fournitures scolaires à Daloa</title>
+
   <style>
-    :root{--blue:#0b5ed7;--dark:#082b63;--light:#eef6ff;--text:#10213b;--muted:#66758a;--white:#fff;--shadow:0 12px 35px #082b6315}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#f7faff}
-    a{text-decoration:none;color:inherit}.top{background:var(--dark);color:#fff;text-align:center;padding:8px 14px;font-size:13px}
-    header{position:sticky;top:0;z-index:20;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid #dfe9f6}
-    .nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:15px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--dark)}.brand-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#57a4ff);display:grid;place-items:center;color:white;font-size:22px}
-    nav{display:flex;gap:18px;font-size:14px;font-weight:700}nav a:hover{color:var(--blue)}
-    .actions{display:flex;gap:8px}.btn{border:0;border-radius:13px;padding:12px 16px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{background:var(--blue);color:#fff}.secondary{background:var(--light);color:var(--blue)}
-    .hero{background:radial-gradient(circle at 80% 20%,#78b7ff55,transparent 32%),linear-gradient(135deg,#eaf4ff,#fff);padding:70px 18px 55px}
-    .hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px}.eyebrow{display:inline-block;background:#dcecff;color:var(--blue);padding:7px 11px;border-radius:999px;font-weight:800;font-size:13px}
-    h1{font-size:clamp(38px,6vw,70px);line-height:.98;margin:18px 0;color:var(--dark);letter-spacing:-2px}.hero p{font-size:18px;color:var(--muted);max-width:650px;line-height:1.6}
-    .hero-card{background:#fff;border-radius:30px;padding:30px;box-shadow:var(--shadow);border:1px solid #e4eefb}.school-icon{font-size:75px;text-align:center}.hero-card h3{margin:10px 0 5px}.mini{color:var(--muted);font-size:14px}
-    section{max-width:1150px;margin:auto;padding:65px 18px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:25px}.section-head h2{margin:0;font-size:32px;color:var(--dark)}.section-head p{color:var(--muted)}
-    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{background:#fff;border:1px solid #e4eefb;border-radius:18px;padding:20px;box-shadow:var(--shadow);cursor:pointer;transition:.2s}.cat:hover{transform:translateY(-3px)}.cat b{display:block;margin-top:8px}.cat span{font-size:30px}
-    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.search{flex:1;min-width:220px;border:1px solid #d6e2f1;border-radius:14px;padding:13px 15px;font-size:15px;background:#fff}.select{border:1px solid #d6e2f1;border-radius:14px;padding:13px;background:#fff}
-    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#fff;border:1px solid #e4eefb;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.photo{height:150px;background:linear-gradient(135deg,#e9f3ff,#f8fbff);display:grid;place-items:center;font-size:54px}.product-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.product h3{font-size:16px;margin:0}.product p{font-size:13px;color:var(--muted);margin:0}.price{font-weight:900;color:var(--dark);font-size:17px}.product .btn{margin-top:auto;width:100%}
-    .feature{background:var(--dark);color:#fff;border-radius:28px;padding:30px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.feature p{color:#dbeaff}.feature .btn{background:#fff;color:var(--blue)}
-    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.why article{background:#fff;border-radius:18px;padding:22px;border:1px solid #e4eefb;box-shadow:var(--shadow)}.why span{font-size:30px}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{background:#fff;padding:25px;border-radius:22px;border:1px solid #e4eefb;box-shadow:var(--shadow)}.contact-card p{line-height:1.7;color:var(--muted)}
-    footer{background:#061f48;color:#dbeaff;padding:35px 18px}.footer-inner{max-width:1150px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner b{color:#fff}
-    .float-wa{position:fixed;right:18px;bottom:18px;z-index:30;background:#19a974;color:#fff;border-radius:999px;padding:14px 17px;font-weight:900;box-shadow:0 10px 25px #0003}
-    .cart{position:fixed;right:18px;top:85px;z-index:25;background:#fff;border:1px solid #dbe6f5;border-radius:16px;padding:12px 15px;font-weight:900;box-shadow:var(--shadow);cursor:pointer}.badge{background:var(--blue);color:#fff;border-radius:999px;padding:2px 7px;font-size:12px}
-    .modal{position:fixed;inset:0;background:#071c3988;display:none;align-items:flex-end;justify-content:center;z-index:50}.modal.show{display:flex}.sheet{background:#fff;width:min(650px,100%);max-height:88vh;overflow:auto;border-radius:25px 25px 0 0;padding:22px}.sheet-head{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#eef4fb;border-radius:10px;padding:9px;cursor:pointer}.cart-row{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #e8eef6}.qty{display:flex;align-items:center;gap:8px}.qty button{border:0;background:#e9f2ff;padding:5px 9px;border-radius:8px;cursor:pointer}.form{display:grid;gap:10px;margin-top:15px}.form input,.form select{padding:12px;border:1px solid #d6e2f1;border-radius:12px}.empty{padding:20px;text-align:center;color:var(--muted)}
-    @media(max-width:850px){nav{display:none}.hero-inner{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.why,.contact{grid-template-columns:1fr}.feature{grid-template-columns:1fr}}
-    @media(max-width:480px){.hero{padding-top:45px}section{padding:48px 14px}.products{grid-template-columns:1fr 1fr;gap:10px}.photo{height:120px}.product-body{padding:12px}.btn{padding:11px 12px}.actions .btn:first-child{display:none}.cart{top:auto;bottom:78px;right:15px}.float-wa{bottom:16px;left:15px;right:auto}}
+    :root{
+      --blue:#0b5ed7;
+      --dark:#082b63;
+      --light:#eef6ff;
+      --text:#10213b;
+      --muted:#66758a;
+      --white:#fff;
+      --shadow:0 12px 35px #082b6315;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:#f7faff;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .top{
+      background:var(--dark);
+      color:#fff;
+      text-align:center;
+      padding:8px 14px;
+      font-size:13px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#ffffffee;
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid #dfe9f6;
+    }
+
+    .nav{
+      max-width:1150px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 18px;
+      gap:15px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      color:var(--dark);
+    }
+
+    .brand-mark{
+      width:52px;
+      height:52px;
+      border-radius:14px;
+      background:#fff;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border:1px solid #dfe9f6;
+    }
+
+    .brand-mark img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    nav{
+      display:flex;
+      gap:18px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    nav a:hover{
+      color:var(--blue);
+    }
+
+    .actions{
+      display:flex;
+      gap:8px;
+    }
+
+    .btn{
+      border:0;
+      border-radius:13px;
+      padding:12px 16px;
+      font-weight:800;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    .primary{
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .secondary{
+      background:var(--light);
+      color:var(--blue);
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 80% 20%,#78b7ff55,transparent 32%),
+        linear-gradient(135deg,#eaf4ff,#fff);
+      padding:70px 18px 55px;
+    }
+
+    .hero-inner{
+      max-width:1150px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      align-items:center;
+      gap:40px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:#dcecff;
+      color:var(--blue);
+      padding:7px 11px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:13px;
+    }
+
+    h1{
+      font-size:clamp(38px,6vw,70px);
+      line-height:.98;
+      margin:18px 0;
+      color:var(--dark);
+      letter-spacing:-2px;
+    }
+
+    .hero p{
+      font-size:18px;
+      color:var(--muted);
+      max-width:650px;
+      line-height:1.6;
+    }
+
+    .hero-card{
+      background:#fff;
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      border:1px solid #e4eefb;
+      text-align:center;
+    }
+
+    .hero-logo{
+      width:210px;
+      max-width:100%;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .hero-card h3{
+      margin:10px 0 5px;
+    }
+
+    .mini{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    section{
+      max-width:1150px;
+      margin:auto;
+      padding:65px 18px;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:15px;
+      margin-bottom:25px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:32px;
+      color:var(--dark);
+    }
+
+    .section-head p{
+      color:var(--muted);
+    }
+
+    .categories{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .cat{
+      background:#fff;
+      border:1px solid #e4eefb;
+      border-radius:18px;
+      padding:20px;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      transition:.2s;
+      min-height:180px;
+    }
+
+    .cat:hover{
+      transform:translateY(-3px);
+    }
+
+    .cat img{
+      width:80px;
+      height:80px;
+      object-fit:contain;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .cat span{
+      font-size:55px;
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .cat b{
+      display:block;
+      margin-top:8px;
+      font-size:17px;
+    }
+
+    .toolbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .search{
+      flex:1;
+      min-width:220px;
+      border:1px solid #d6e2f1;
+      border-radius:14px;
+      padding:13px 15px;
+      font-size:15px;
+      background:#fff;
+    }
+
+    .select{
+      border:1px solid #d6e2f1;
+      border-radius:14px;
+      padding:13px;
+      background:#fff;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .product{
+      background:#fff;
+      border:1px solid #e4eefb;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .photo{
+      height:180px;
+      background:linear-gradient(135deg,#e9f3ff,#f8fbff);
+      display:grid;
+      place-items:center;
+      font-size:54px;
+      overflow:hidden;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:12px;
+    }
+
+    .product-body{
+      padding:15px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      flex:1;
+    }
+
+    .product h3{
+      font-size:16px;
+      margin:0;
+    }
+
+    .product p{
+      font-size:13px;
+      color:var(--muted);
+      margin:0;
+    }
+
+    .price{
+      font-weight:900;
+      color:var(--dark);
+      font-size:17px;
+    }
+
+    .product .btn{
+      margin-top:auto;
+      width:100%;
+    }
+
+    .feature{
+      background:var(--dark);
+      color:#fff;
+      border-radius:28px;
+      padding:30px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:center;
+      gap:20px;
+    }
+
+    .feature p{
+      color:#dbeaff;
+    }
+
+    .feature .btn{
+      background:#fff;
+      color:var(--blue);
+    }
+
+    .why{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .why article{
+      background:#fff;
+      border-radius:18px;
+      padding:22px;
+      border:1px solid #e4eefb;
+      box-shadow:var(--shadow);
+    }
+
+    .why span{
+      font-size:30px;
+    }
+
+    .contact{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .contact-card{
+      background:#fff;
+      padding:25px;
+      border-radius:22px;
+      border:1px solid #e4eefb;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-card p{
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    footer{
+      background:#061f48;
+      color:#dbeaff;
+      padding:35px 18px;
+    }
+
+    .footer-inner{
+      max-width:1150px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-inner b{
+      color:#fff;
+    }
+
+    .float-wa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:30;
+      background:#19a974;
+      color:#fff;
+      border-radius:999px;
+      padding:14px 17px;
+      font-weight:900;
+      box-shadow:0 10px 25px #0003;
+    }
+
+    .cart{
+      position:fixed;
+      right:18px;
+      top:85px;
+      z-index:25;
+      background:#fff;
+      border:1px solid #dbe6f5;
+      border-radius:16px;
+      padding:12px 15px;
+      font-weight:900;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+    }
+
+    .badge{
+      background:var(--blue);
+      color:#fff;
+      border-radius:999px;
+      padding:2px 7px;
+      font-size:12px;
+    }
+
+    .modal{
+      position:fixed;
+      inset:0;
+      background:#071c3988;
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      z-index:50;
+    }
+
+    .modal.show{
+      display:flex;
+    }
+
+    .sheet{
+      background:#fff;
+      width:min(650px,100%);
+      max-height:88vh;
+      overflow:auto;
+      border-radius:25px 25px 0 0;
+      padding:22px;
+    }
+
+    .sheet-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .close{
+      border:0;
+      background:#eef4fb;
+      border-radius:10px;
+      padding:9px;
+      cursor:pointer;
+    }
+
+    .cart-row{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding:13px 0;
+      border-bottom:1px solid #e8eef6;
+    }
+
+    .qty{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .qty button{
+      border:0;
+      background:#e9f2ff;
+      padding:5px 9px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    .form{
+      display:grid;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .form input,
+    .form select{
+      padding:12px;
+      border:1px solid #d6e2f1;
+      border-radius:12px;
+    }
+
+    .empty{
+      padding:20px;
+      text-align:center;
+      color:var(--muted);
+    }
+
+    @media(max-width:850px){
+
+      nav{
+        display:none;
+      }
+
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+
+      .categories{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .products{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why,
+      .contact{
+        grid-template-columns:1fr;
+      }
+
+      .feature{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:480px){
+
+      .hero{
+        padding-top:45px;
+      }
+
+      section{
+        padding:48px 14px;
+      }
+
+      .products{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+      }
+
+      .photo{
+        height:140px;
+      }
+
+      .product-body{
+        padding:12px;
+      }
+
+      .btn{
+        padding:11px 12px;
+      }
+
+      .actions .btn:first-child{
+        display:none;
+      }
+
+      .cart{
+        top:auto;
+        bottom:78px;
+        right:15px;
+      }
+
+      .float-wa{
+        bottom:16px;
+        left:15px;
+        right:auto;
+      }
+
+      .cat{
+        padding:15px;
+        min-height:165px;
+      }
+
+      .cat img{
+        width:65px;
+        height:65px;
+      }
+
+      .section-head h2{
+        font-size:27px;
+      }
+
+      .brand-mark{
+        width:48px;
+        height:48px;
+      }
+    }
   </style>
 </head>
+
 <body>
-<div class="top">📍 Daloa — Gbokora, vers le petit marché · 🚚 Livraison à Daloa : 500 F</div>
-<header><div class="nav">
-  <a class="brand" href="#accueil"><span class="brand-mark">📚</span><span>DJELI BI<br>SERVICE</span></a>
-  <nav><a href="#boutique">Boutique</a><a href="#liste">Liste scolaire</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
-  <div class="actions"><a class="btn secondary" href="tel:0596200605">📞 Appeler</a><a class="btn primary" href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B">💬 WhatsApp</a></div>
-</div></header>
+
+<div class="top">
+  📍 Daloa — Gbokora, vers le petit marché · 🚚 Livraison à Daloa : 500 F
+</div>
+
+<header>
+  <div class="nav">
+
+    <a class="brand" href="#accueil">
+      <span class="brand-mark">
+        <img src="logo.png" alt="DJELI BI SERVICE">
+      </span>
+
+      <span>
+        DJELI BI<br>SERVICE
+      </span>
+    </a>
+
+    <nav>
+      <a href="#boutique">Boutique</a>
+      <a href="#liste">Liste scolaire</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn secondary" href="tel:0596200605">
+        📞 Appeler
+      </a>
+
+      <a class="btn primary"
+         href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B">
+        💬 WhatsApp
+      </a>
+    </div>
+
+  </div>
+</header>
+
 
 <main id="accueil">
-<section class="hero"><div class="hero-inner">
-  <div><span class="eyebrow">📚 Le spécialiste des fournitures scolaires à Daloa</span>
-    <h1>Tout pour apprendre.<br><span style="color:var(--blue)">Tout pour réussir.</span></h1>
-    <p>Bienvenue chez <b>DJELI BI SERVICE</b>. Retrouvez livres, annales, fournitures scolaires, sacs, calculatrices et bien plus encore, avec une commande simple sur WhatsApp.</p>
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn primary" href="#boutique">🛍️ Découvrir les produits</a><a class="btn secondary" href="#liste">🎒 Préparer ma rentrée</a></div>
+
+<!-- ACCUEIL -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <span class="eyebrow">
+        📚 Le spécialiste des fournitures scolaires à Daloa
+      </span>
+
+      <h1>
+        Tout pour apprendre.<br>
+        <span style="color:var(--blue)">
+          Tout pour réussir.
+        </span>
+      </h1>
+
+      <p>
+        Bienvenue chez <b>DJELI BI SERVICE</b>.
+        Retrouvez livres, annales, fournitures scolaires,
+        sacs, calculatrices et bien plus encore,
+        avec une commande simple sur WhatsApp.
+      </p>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+
+        <a class="btn primary" href="#boutique">
+          🛍️ Découvrir les produits
+        </a>
+
+        <a class="btn secondary" href="#liste">
+          🎒 Préparer ma rentrée
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <img
+        class="hero-logo"
+        src="logo.png"
+        alt="Logo DJELI BI SERVICE"
+      >
+
+      <h3>
+        Rendre heureux les apprenants ❤️
+      </h3>
+
+      <div class="mini">
+        Boutique à Gbokora · Lundi–samedi · 8h–19h
+      </div>
+
+    </div>
+
   </div>
-  <div class="hero-card"><div class="school-icon">🎒📚✏️</div><h3>Rendre heureux les apprenants ❤️</h3><div class="mini">Boutique à Gbokora · Lundi–samedi · 8h–19h</div></div>
-</div></section>
 
-<section><div class="section-head"><div><h2>Nos catégories</h2><p>Trouvez rapidement ce dont vous avez besoin.</p></div></div>
-<div class="categories">
-  <div class="cat" onclick="filterCat('Livres & annales')"><span>📚</span><b>Livres & annales</b></div>
-  <div class="cat" onclick="filterCat('Fournitures')"><span>✏️</span><b>Fournitures scolaires</b></div>
-  <div class="cat" onclick="filterCat('Géométrie')"><span>📐</span><b>Géométrie</b></div>
-  <div class="cat" onclick="filterCat('Sacs')"><span>🎒</span><b>Sacs à dos</b></div>
-  <div class="cat" onclick="filterCat('Papeterie')"><span>📄</span><b>Papeterie & rames</b></div>
-  <div class="cat" onclick="filterCat('Calculatrices')"><span>🧮</span><b>Calculatrices</b></div>
-  <div class="cat" onclick="filterCat('Écriture')"><span>🖊️</span><b>Stylos & marqueurs</b></div>
-  <div class="cat" onclick="filterCat('Autres')"><span>✨</span><b>Autres produits</b></div>
-</div></section>
+</section>
 
-<section id="boutique"><div class="section-head"><div><h2>🛍️ Notre boutique</h2><p>Une première sélection. Les produits pourront être remplacés par tes vrais articles.</p></div></div>
-<div class="toolbar"><input id="search" class="search" placeholder="🔎 Rechercher un produit..." oninput="renderProducts()"><select id="cat" class="select" onchange="renderProducts()"><option value="">Toutes les catégories</option><option>Livres & annales</option><option>Fournitures</option><option>Géométrie</option><option>Sacs</option><option>Papeterie</option><option>Calculatrices</option><option>Écriture</option></select></div>
-<div id="products" class="products"></div></section>
 
-<section id="liste"><div class="feature"><div><h2>🎒 Prépare ta rentrée</h2><p>Construis ta liste scolaire et retrouve les articles essentiels au même endroit. Cette fonction pourra être enrichie avec les listes réelles par niveau.</p></div><button class="btn" onclick="showList()">Créer ma liste scolaire</button></div></section>
+<!-- CATEGORIES -->
 
-<section id="apropos"><div class="section-head"><div><h2>❤️ Pourquoi DJELI BI SERVICE ?</h2><p>Une boutique pensée pour simplifier les achats scolaires.</p></div></div>
-<div class="why">
-<article><span>📚</span><h3>Spécialiste scolaire</h3><p>Des produits adaptés aux apprenants de tous niveaux.</p></article>
-<article><span>💬</span><h3>Commande facile</h3><p>Ton panier peut être envoyé directement sur WhatsApp.</p></article>
-<article><span>🚚</span><h3>Livraison à Daloa</h3><p>Livraison disponible à Daloa au tarif de 500 F.</p></article>
-<article><span>🏪</span><h3>Retrait en boutique</h3><p>Retire ta commande à Gbokora, vers le petit marché.</p></article>
-<article><span>⭐</span><h3>À l'écoute des clients</h3><p>Les avis clients pourront aider à améliorer le service.</p></article>
-<article><span>❤️</span><h3>Notre mission</h3><p>Rendre heureux les apprenants.</p></article>
-</div></section>
+<section>
 
-<section id="contact"><div class="section-head"><div><h2>📞 Contact</h2><p>Une question ? Une commande ? Nous sommes disponibles.</p></div></div>
-<div class="contact"><div class="contact-card"><h3>DJELI BI SERVICE</h3><p>📍 Daloa — Gbokora, vers le petit marché<br>🕐 Lundi–samedi : 8h–19h<br>🚫 Dimanche : fermé</p><a class="btn primary" href="tel:0596200605">📞 0596200605</a> <a class="btn secondary" href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B">💬 WhatsApp</a></div>
-<div class="contact-card"><h3>📍 Nous trouver</h3><p>Gbokora, vers le petit marché à Daloa.</p><a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gbokora%20Daloa%20Cote%20d%27Ivoire">🗺️ Ouvrir la carte</a></div></div></section>
+  <div class="section-head">
+
+    <div>
+      <h2>Nos catégories</h2>
+      <p>
+        Trouvez rapidement ce dont vous avez besoin.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="categories">
+
+    <div class="cat"
+         onclick="filterCat('Livres & annales')">
+
+      <img
+        src="cahiers%20scolaires.jpg"
+        alt="Livres et annales"
+      >
+
+      <b>Livres & annales</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Fournitures')">
+
+      <img
+        src="cahiers%20scolaires.jpg"
+        alt="Fournitures scolaires"
+      >
+
+      <b>Fournitures scolaires</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Géométrie')">
+
+      <img
+        src="géométrie.jpg"
+        alt="Géométrie"
+      >
+
+      <b>Géométrie</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Sacs')">
+
+      <span>🎒</span>
+
+      <b>Sacs à dos</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Papeterie')">
+
+      <span>📄</span>
+
+      <b>Papeterie & rames</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Calculatrices')">
+
+      <img
+        src="calculatrice.jpg"
+        alt="Calculatrices"
+      >
+
+      <b>Calculatrices</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Écriture')">
+
+      <img
+        src="crayon%20%C3%A0%20%C3%A9crire%20et%20dessiner.jpg"
+        alt="Stylos et marqueurs"
+      >
+
+      <b>Stylos & marqueurs</b>
+
+    </div>
+
+
+    <div class="cat"
+         onclick="filterCat('Autres')">
+
+      <span>✨</span>
+
+      <b>Autres produits</b>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BOUTIQUE -->
+
+<section id="boutique">
+
+  <div class="section-head">
+
+    <div>
+
+      <h2>🛍️ Notre boutique</h2>
+
+      <p>
+        Découvrez nos produits scolaires.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="toolbar">
+
+    <input
+      id="search"
+      class="search"
+      placeholder="🔎 Rechercher un produit..."
+      oninput="renderProducts()"
+    >
+
+
+    <select
+      id="cat"
+      class="select"
+      onchange="renderProducts()"
+    >
+
+      <option value="">
+        Toutes les catégories
+      </option>
+
+      <option>
+        Livres & annales
+      </option>
+
+      <option>
+        Fournitures
+      </option>
+
+      <option>
+        Géométrie
+      </option>
+
+      <option>
+        Sacs
+      </option>
+
+      <option>
+        Papeterie
+      </option>
+
+      <option>
+        Calculatrices
+      </option>
+
+      <option>
+        Écriture
+      </option>
+
+      <option>
+        Autres
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div id="products" class="products"></div>
+
+</section>
+
+
+<!-- LISTE SCOLAIRE -->
+
+<section id="liste">
+
+  <div class="feature">
+
+    <div>
+
+      <h2>
+        🎒 Prépare ta rentrée
+      </h2>
+
+      <p>
+        Construis ta liste scolaire et retrouve
+        les articles essentiels au même endroit.
+      </p>
+
+    </div>
+
+    <button
+      class="btn"
+      onclick="showList()"
+    >
+      Créer ma liste scolaire
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- A PROPOS -->
+
+<section id="apropos">
+
+  <div class="section-head">
+
+    <div>
+
+      <h2>
+        ❤️ Pourquoi DJELI BI SERVICE ?
+      </h2>
+
+      <p>
+        Une boutique pensée pour simplifier les achats scolaires.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="why">
+
+    <article>
+      <span>📚</span>
+      <h3>Spécialiste scolaire</h3>
+      <p>
+        Des produits adaptés aux apprenants de tous niveaux.
+      </p>
+    </article>
+
+
+    <article>
+      <span>💬</span>
+      <h3>Commande facile</h3>
+      <p>
+        Ton panier peut être envoyé directement sur WhatsApp.
+      </p>
+    </article>
+
+
+    <article>
+      <span>🚚</span>
+      <h3>Livraison à Daloa</h3>
+      <p>
+        Livraison disponible à Daloa au tarif de 500 F.
+      </p>
+    </article>
+
+
+    <article>
+      <span>🏪</span>
+      <h3>Retrait en boutique</h3>
+      <p>
+        Retire ta commande à Gbokora, vers le petit marché.
+      </p>
+    </article>
+
+
+    <article>
+      <span>⭐</span>
+      <h3>À l'écoute des clients</h3>
+      <p>
+        Les avis clients pourront aider à améliorer le service.
+      </p>
+    </article>
+
+
+    <article>
+      <span>❤️</span>
+      <h3>Notre mission</h3>
+      <p>
+        Rendre heureux les apprenants.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="section-head">
+
+    <div>
+
+      <h2>📞 Contact</h2>
+
+      <p>
+        Une question ? Une commande ?
+        Nous sommes disponibles.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="contact">
+
+    <div class="contact-card">
+
+      <h3>
+        DJELI BI SERVICE
+      </h3>
+
+      <p>
+        📍 Daloa — Gbokora, vers le petit marché<br>
+        🕐 Lundi–samedi : 8h–19h<br>
+        🚫 Dimanche : fermé
+      </p>
+
+      <a
+        class="btn primary"
+        href="tel:0596200605"
+      >
+        📞 0596200605
+      </a>
+
+      <a
+        class="btn secondary"
+        href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B"
+      >
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <h3>
+        📍 Nous trouver
+      </h3>
+
+      <p>
+        Gbokora, vers le petit marché à Daloa.
+      </p>
+
+      <a
+        class="btn primary"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=Gbokora%20Daloa%20Cote%20d%27Ivoire"
+      >
+        🗺️ Ouvrir la carte
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
 </main>
 
-<footer><div class="footer-inner"><div><b>DJELI BI SERVICE</b><br>Tout pour apprendre. Tout pour réussir.</div><div>📍 Daloa — Gbokora · 💬 0504239264</div></div></footer>
-<a class="float-wa" href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B">💬 WhatsApp</a>
-<button class="cart" onclick="openCart()">🛒 Panier <span id="count" class="badge">0</span></button>
 
-<div id="modal" class="modal" onclick="if(event.target.id==='modal')closeCart()"><div class="sheet">
-<div class="sheet-head"><h2>🛒 Ma commande</h2><button class="close" onclick="closeCart()">✕</button></div>
-<div id="cartItems"></div>
-<div id="cartBottom"></div>
-</div></div>
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <b>DJELI BI SERVICE</b><br>
+      Tout pour apprendre. Tout pour réussir.
+    </div>
+
+    <div>
+      📍 Daloa — Gbokora · 💬 0504239264
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+  class="float-wa"
+  href="https://wa.me/2250504239264?text=Bonjour%20DJELI%20BI%20SERVICE%20%F0%9F%91%8B"
+>
+  💬 WhatsApp
+</a>
+
+
+<!-- PANIER -->
+
+<button
+  class="cart"
+  onclick="openCart()"
+>
+  🛒 Panier
+  <span id="count" class="badge">0</span>
+</button>
+
+
+<!-- MODAL PANIER -->
+
+<div
+  id="modal"
+  class="modal"
+  onclick="if(event.target.id==='modal')closeCart()"
+>
+
+  <div class="sheet">
+
+    <div class="sheet-head">
+
+      <h2>
+        🛒 Ma commande
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeCart()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+    <div id="cartBottom"></div>
+
+  </div>
+
+</div>
+
 
 <script>
+
+/* ================================
+   NUMERO WHATSAPP
+================================ */
+
 const WA="2250504239264";
+
+
+/* ================================
+   PRODUITS
+================================ */
+
 const products=[
-{name:"Annale tous niveaux",cat:"Livres & annales",price:1500,icon:"📖",desc:"Annales pour accompagner les révisions."},
-{name:"Livre scolaire",cat:"Livres & annales",price:2500,icon:"📚",desc:"Livres scolaires selon le niveau."},
-{name:"Rame de papier",cat:"Papeterie",price:3500,icon:"📄",desc:"Rame de papier pour les besoins scolaires."},
-{name:"Ensemble géométrie",cat:"Géométrie",price:2000,icon:"📐",desc:"L'essentiel pour les exercices de géométrie."},
-{name:"Sac à dos scolaire",cat:"Sacs",price:7500,icon:"🎒",desc:"Sac pratique pour les cours."},
-{name:"Stylo bleu",cat:"Écriture",price:250,icon:"🖊️",desc:"Stylo pour les travaux quotidiens."},
-{name:"Marqueur",cat:"Écriture",price:500,icon:"🖍️",desc:"Marqueur pour l'école et les travaux."},
-{name:"Calculatrice",cat:"Calculatrices",price:3500,icon:"🧮",desc:"Calculatrice scolaire."},
-{name:"Cahier",cat:"Fournitures",price:500,icon:"📓",desc:"Cahier scolaire."},
-{name:"Crayon",cat:"Fournitures",price:200,icon:"✏️",desc:"Crayon pour écrire et dessiner."},
-{name:"Article à prix sur demande",cat:"Autres",price:null,icon:"✨",desc:"Contacte-nous sur WhatsApp pour connaître le prix."}
+
+  {
+    name:"Annale tous niveaux",
+    cat:"Livres & annales",
+    price:1500,
+    image:"cahiers%20scolaires.jpg",
+    icon:"📖",
+    desc:"Annales pour accompagner les révisions."
+  },
+
+  {
+    name:"Livre scolaire",
+    cat:"Livres & annales",
+    price:2500,
+    image:"cahiers%20scolaires.jpg",
+    icon:"📚",
+    desc:"Livres scolaires selon le niveau."
+  },
+
+  {
+    name:"Rame de papier",
+    cat:"Papeterie",
+    price:3500,
+    image:null,
+    icon:"📄",
+    desc:"Rame de papier pour les besoins scolaires."
+  },
+
+  {
+    name:"Ensemble géométrie",
+    cat:"Géométrie",
+    price:2000,
+    image:"géométrie.jpg",
+    icon:"📐",
+    desc:"L'essentiel pour les exercices de géométrie."
+  },
+
+  {
+    name:"Sac à dos scolaire",
+    cat:"Sacs",
+    price:7500,
+    image:null,
+    icon:"🎒",
+    desc:"Sac pratique pour les cours."
+  },
+
+  {
+    name:"Stylo bleu",
+    cat:"Écriture",
+    price:250,
+    image:null,
+    icon:"🖊️",
+    desc:"Stylo pour les travaux quotidiens."
+  },
+
+  {
+    name:"Marqueur",
+    cat:"Écriture",
+    price:500,
+    image:null,
+    icon:"🖍️",
+    desc:"Marqueur pour l'école et les travaux."
+  },
+
+  {
+    name:"Calculatrice",
+    cat:"Calculatrices",
+    price:3500,
+    image:"calculatrice.jpg",
+    icon:"🧮",
+    desc:"Calculatrice scolaire."
+  },
+
+  {
+    name:"Cahier",
+    cat:"Fournitures",
+    price:500,
+    image:"cahiers%20scolaires.jpg",
+    icon:"📓",
+    desc:"Cahier scolaire."
+  },
+
+  {
+    name:"Crayon",
+    cat:"Fournitures",
+    price:200,
+    image:"crayon%20%C3%A0%20%C3%A9crire%20et%20dessiner.jpg",
+    icon:"✏️",
+    desc:"Crayon pour écrire et dessiner."
+  },
+
+  {
+    name:"Article à prix sur demande",
+    cat:"Autres",
+    price:null,
+    image:null,
+    icon:"✨",
+    desc:"Contacte-nous sur WhatsApp pour connaître le prix."
+  }
+
 ];
-let cart=JSON.parse(localStorage.getItem("djeliCart")||"[]");
-function money(n){return new Intl.NumberFormat("fr-FR").format(n)+" F";}
+
+
+/* ================================
+   PANIER
+================================ */
+
+let cart=JSON.parse(
+  localStorage.getItem("djeliCart")||"[]"
+);
+
+
+/* ================================
+   FORMAT PRIX
+================================ */
+
+function money(n){
+
+  return new Intl.NumberFormat("fr-FR")
+    .format(n)+" F";
+
+}
+
+
+/* ================================
+   AFFICHER PRODUITS
+================================ */
+
 function renderProducts(){
- const q=document.getElementById("search").value.toLowerCase(), c=document.getElementById("cat").value;
- const list=products.filter(p=>(!q||(p.name+" "+p.desc).toLowerCase().includes(q))&&(!c||p.cat===c));
- document.getElementById("products").innerHTML=list.map((p,i)=>`<article class="product"><div class="photo">${p.icon}</div><div class="product-body"><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${p.price===null?"Prix sur demande":money(p.price)}</div>${p.price===null?`<a class="btn secondary" href="https://wa.me/${WA}?text=${encodeURIComponent("Bonjour DJELI BI SERVICE 👋 Je voudrais connaître le prix de : "+p.name)}">💬 Demander le prix</a>`:`<button class="btn primary" onclick="add(${products.indexOf(p)})">🛒 Ajouter au panier</button>`}</div></article>`).join("")||"<div class='empty'>Aucun produit trouvé.</div>";
+
+  const q=
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase();
+
+  const c=
+    document
+      .getElementById("cat")
+      .value;
+
+
+  const list=products.filter(
+
+    p=>
+
+      (
+        !q ||
+        (p.name+" "+p.desc)
+          .toLowerCase()
+          .includes(q)
+      )
+
+      &&
+
+      (
+        !c ||
+        p.cat===c
+      )
+
+  );
+
+
+  document.getElementById("products").innerHTML=
+
+    list.map(
+
+      p=>`
+
+        <article class="product">
+
+          <div class="photo">
+
+            ${
+              p.image
+
+              ?
+
+              `<img
+                src="${p.image}"
+                alt="${p.name}"
+                onerror="this.style.display='none';this.parentElement.innerHTML='${p.icon || "📦"}';"
+              >`
+
+              :
+
+              (p.icon || "📦")
+
+            }
+
+          </div>
+
+
+          <div class="product-body">
+
+            <h3>
+              ${p.name}
+            </h3>
+
+            <p>
+              ${p.desc}
+            </p>
+
+            <div class="price">
+
+              ${
+                p.price===null
+                ?
+                "Prix sur demande"
+                :
+                money(p.price)
+              }
+
+            </div>
+
+
+            ${
+              p.price===null
+
+              ?
+
+              `<a
+                class="btn secondary"
+                href="https://wa.me/${WA}?text=${encodeURIComponent(
+                  "Bonjour DJELI BI SERVICE 👋 Je voudrais connaître le prix de : "+p.name
+                )}"
+              >
+                💬 Demander le prix
+              </a>`
+
+              :
+
+              `<button
+                class="btn primary"
+                onclick="add(${products.indexOf(p)})"
+              >
+                🛒 Ajouter au panier
+              </button>`
+
+            }
+
+          </div>
+
+        </article>
+
+      `
+
+    ).join("")
+
+    ||
+
+    "<div class='empty'>Aucun produit trouvé.</div>";
+
 }
-function add(i){cart.push({...products[i],qty:1});save();openCart();}
-function save(){localStorage.setItem("djeliCart",JSON.stringify(cart));document.getElementById("count").textContent=cart.reduce((s,p)=>s+p.qty,0);}
-function change(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);save();renderCart();}
-function removeItem(i){cart.splice(i,1);save();renderCart();}
-function openCart(){document.getElementById("modal").classList.add("show");renderCart();}
-function closeCart(){document.getElementById("modal").classList.remove("show");}
+
+
+/* ================================
+   AJOUTER AU PANIER
+================================ */
+
+function add(i){
+
+  const existing=
+    cart.findIndex(
+      p=>p.name===products[i].name
+    );
+
+
+  if(existing!==-1){
+
+    cart[existing].qty++;
+
+  }else{
+
+    cart.push({
+      ...products[i],
+      qty:1
+    });
+
+  }
+
+
+  save();
+
+  openCart();
+
+}
+
+
+/* ================================
+   SAUVEGARDER PANIER
+================================ */
+
+function save(){
+
+  localStorage.setItem(
+    "djeliCart",
+    JSON.stringify(cart)
+  );
+
+
+  document.getElementById("count")
+    .textContent=
+      cart.reduce(
+        (s,p)=>s+p.qty,
+        0
+      );
+
+}
+
+
+/* ================================
+   CHANGER QUANTITE
+================================ */
+
+function change(i,d){
+
+  cart[i].qty+=d;
+
+
+  if(cart[i].qty<=0){
+
+    cart.splice(i,1);
+
+  }
+
+
+  save();
+
+  renderCart();
+
+}
+
+
+/* ================================
+   SUPPRIMER ARTICLE
+================================ */
+
+function removeItem(i){
+
+  cart.splice(i,1);
+
+  save();
+
+  renderCart();
+
+}
+
+
+/* ================================
+   OUVRIR PANIER
+================================ */
+
+function openCart(){
+
+  document
+    .getElementById("modal")
+    .classList.add("show");
+
+  renderCart();
+
+}
+
+
+/* ================================
+   FERMER PANIER
+================================ */
+
+function closeCart(){
+
+  document
+    .getElementById("modal")
+    .classList.remove("show");
+
+}
+
+
+/* ================================
+   AFFICHER PANIER
+================================ */
+
 function renderCart(){
- const box=document.getElementById("cartItems");
- if(!cart.length){box.innerHTML="<div class='empty'>Ton panier est vide.</div>";document.getElementById("cartBottom").innerHTML="";return;}
- box.innerHTML=cart.map((p,i)=>`<div class="cart-row"><div><b>${p.name}</b><br><small>${money(p.price)} × ${p.qty}</small></div><div class="qty"><button onclick="change(${i},-1)">−</button><b>${p.qty}</b><button onclick="change(${i},1)">+</button><button onclick="removeItem(${i})">🗑️</button></div></div>`).join("");
- const total=cart.reduce((s,p)=>s+p.price*p.qty,0);
- document.getElementById("cartBottom").innerHTML=`<h3>Total produits : ${money(total)}</h3><div class="form"><input id="custName" placeholder="Nom et prénom *"><input id="custPhone" placeholder="Téléphone *"><select id="mode"><option value="Retrait en boutique">Retrait en boutique</option><option value="Livraison">Livraison — 500 F</option></select><input id="address" placeholder="Quartier / adresse / repère *"><button class="btn primary" onclick="sendOrder()">💬 Envoyer la commande sur WhatsApp</button></div>`;
+
+  const box=
+    document.getElementById("cartItems");
+
+
+  if(!cart.length){
+
+    box.innerHTML=
+      "<div class='empty'>Ton panier est vide.</div>";
+
+    document.getElementById("cartBottom")
+      .innerHTML="";
+
+    return;
+
+  }
+
+
+  box.innerHTML=
+
+    cart.map(
+
+      (p,i)=>`
+
+        <div class="cart-row">
+
+          <div>
+
+            <b>
+              ${p.name}
+            </b>
+
+            <br>
+
+            <small>
+              ${money(p.price)} × ${p.qty}
+            </small>
+
+          </div>
+
+
+          <div class="qty">
+
+            <button
+              onclick="change(${i},-1)"
+            >
+              −
+            </button>
+
+            <b>
+              ${p.qty}
+            </b>
+
+            <button
+              onclick="change(${i},1)"
+            >
+              +
+            </button>
+
+            <button
+              onclick="removeItem(${i})"
+            >
+              🗑️
+            </button>
+
+          </div>
+
+        </div>
+
+      `
+
+    ).join("");
+
+
+  const total=
+
+    cart.reduce(
+      (s,p)=>s+p.price*p.qty,
+      0
+    );
+
+
+  document.getElementById("cartBottom")
+    .innerHTML=
+
+    `
+
+      <h3>
+        Total produits : ${money(total)}
+      </h3>
+
+
+      <div class="form">
+
+        <input
+          id="custName"
+          placeholder="Nom et prénom *"
+        >
+
+        <input
+          id="custPhone"
+          placeholder="Téléphone *"
+        >
+
+
+        <select id="mode">
+
+          <option value="Retrait en boutique">
+            Retrait en boutique
+          </option>
+
+          <option value="Livraison">
+            Livraison — 500 F
+          </option>
+
+        </select>
+
+
+        <input
+          id="address"
+          placeholder="Quartier / adresse / repère *"
+        >
+
+
+        <button
+          class="btn primary"
+          onclick="sendOrder()"
+        >
+          💬 Envoyer la commande sur WhatsApp
+        </button>
+
+      </div>
+
+    `;
+
 }
+
+
+/* ================================
+   ENVOYER COMMANDE WHATSAPP
+================================ */
+
 function sendOrder(){
- const name=document.getElementById("custName").value.trim(), phone=document.getElementById("custPhone").value.trim(), mode=document.getElementById("mode").value, address=document.getElementById("address").value.trim();
- if(!name||!phone||!address){alert("Merci de remplir les champs obligatoires.");return;}
- const total=cart.reduce((s,p)=>s+p.price*p.qty,0)+(mode==="Livraison"?500:0);
- let msg=`Bonjour DJELI BI SERVICE 👋\nJe souhaite passer une commande.\n\n`;
- cart.forEach(p=>msg+=`• ${p.name} × ${p.qty} = ${money(p.price*p.qty)}\n`);
- msg+=`\nSous-total : ${money(total-(mode==="Livraison"?500:0))}\nMode : ${mode}\n${mode==="Livraison"?"Livraison : 500 F\n":""}Total : ${money(total)}\n\nNom : ${name}\nTéléphone : ${phone}\nAdresse / repère : ${address}`;
- window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
+
+  const name=
+    document
+      .getElementById("custName")
+      .value
+      .trim();
+
+
+  const phone=
+    document
+      .getElementById("custPhone")
+      .value
+      .trim();
+
+
+  const mode=
+    document
+      .getElementById("mode")
+      .value;
+
+
+  const address=
+    document
+      .getElementById("address")
+      .value
+      .trim();
+
+
+  if(!name||!phone||!address){
+
+    alert(
+      "Merci de remplir les champs obligatoires."
+    );
+
+    return;
+
+  }
+
+
+  const total=
+
+    cart.reduce(
+      (s,p)=>s+p.price*p.qty,
+      0
+    )
+
+    +
+
+    (mode==="Livraison"?500:0);
+
+
+  let msg=
+
+    `Bonjour DJELI BI SERVICE 👋
+Je souhaite passer une commande.
+
+`;
+
+
+  cart.forEach(
+
+    p=>{
+
+      msg+=
+        `• ${p.name} × ${p.qty} = ${money(p.price*p.qty)}
+`;
+
+    }
+
+  );
+
+
+  msg+=`
+
+Sous-total : ${money(
+    total-(mode==="Livraison"?500:0)
+  )}
+
+Mode : ${mode}
+`;
+
+
+  if(mode==="Livraison"){
+
+    msg+=
+      "Livraison : 500 F\n";
+
+  }
+
+
+  msg+=
+    `Total : ${money(total)}
+
+Nom : ${name}
+Téléphone : ${phone}
+Adresse / repère : ${address}`;
+
+
+  window.open(
+
+    "https://wa.me/"+WA+
+    "?text="+
+    encodeURIComponent(msg),
+
+    "_blank"
+
+  );
+
 }
-function filterCat(c){document.getElementById("cat").value=c;document.getElementById("boutique").scrollIntoView();renderProducts();}
-function showList(){alert("La liste scolaire personnalisée sera enrichie avec les niveaux et les fournitures réelles de DJELI BI SERVICE.");}
-renderProducts();save();
+
+
+/* ================================
+   FILTRER CATEGORIE
+================================ */
+
+function filterCat(c){
+
+  document.getElementById("cat")
+    .value=c;
+
+  document.getElementById("boutique")
+    .scrollIntoView();
+
+  renderProducts();
+
+}
+
+
+/* ================================
+   LISTE SCOLAIRE
+================================ */
+
+function showList(){
+
+  alert(
+    "La liste scolaire personnalisée sera enrichie avec les niveaux et les fournitures réelles de DJELI BI SERVICE."
+  );
+
+}
+
+
+/* ================================
+   DEMARRAGE
+================================ */
+
+renderProducts();
+
+save();
+
 </script>
-</body></html>
+
+</body>
+</html>
